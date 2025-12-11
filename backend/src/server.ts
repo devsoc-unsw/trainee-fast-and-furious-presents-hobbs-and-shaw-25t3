@@ -51,7 +51,7 @@ app.use(async (req: Request, res: Response, next: NextFunction) => {
 })
 
 // Save restaurant for a user
-app.post('/visited', async (req: Request, res: Response) => {
+app.post('/api/visited', async (req: Request, res: Response) => {
   const userId = req.userId as string;
   const { restaurantId } = req.body;
 
@@ -69,7 +69,7 @@ app.post('/visited', async (req: Request, res: Response) => {
 });
 
 // Fetch user's history
-app.get('/history', async (req: Request, res: Response) => {
+app.get('/api/history', async (req: Request, res: Response) => {
   const userId = req.userId as string;
 
   try {
