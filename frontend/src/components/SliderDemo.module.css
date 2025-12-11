@@ -1,0 +1,136 @@
+.page {
+  width: 100vw;
+  height: 100vh;
+  padding: 40px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-40px);
+  background-color: #fff7ea; /* soft cream */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #2e3155; /* dark navy */
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.pin {
+  margin-left: 8px;
+}
+
+.sliderRow {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+/* Radix Root */
+.root {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 48px;
+}
+
+/* Orange bar */
+.track {
+    width: 100%;
+  position: relative;
+  flex-grow: 1;
+  height: 14px;
+  border-radius: 999px;
+  background-color: #d97a61;
+  overflow: hidden;
+}
+
+/* Filled part */
+.range {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #d97a61;
+}
+
+/* Thumb: BIG circle + grow on drag */
+.thumb {
+  width: 40px;
+  height: 40px;
+  display: block; 
+  border-radius: 50%;
+  background-color: #2e3155;
+  box-sizing: border-box;
+  cursor: grab;
+  transition: transform 0.15s ease;
+  outline: none
+}
+
+.thumb:active,
+.thumb[data-state="active"] {
+  transform: scale(1.25);
+  cursor: grabbing;
+}
+
+.valueText {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* Buttons row */
+.buttonsRow {
+  display: flex;
+  gap: 40px;
+  margin-top: 10px;
+}
+
+/* Back button */
+.backButton {
+  min-width: 180px;
+  padding: 14px 32px;
+  border-radius: 999px;
+  border: none;
+  background-color: #f0c46a;
+  color: #2e3155;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* Let Us Decide button */
+.letUsDecideButton {
+  min-width: 180px;
+  padding: 14px 32px;
+  border-radius: 999px;
+  border: none;
+  background-color: #f0c46a;
+  color: #2e3155;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.backButton:hover,
+.letUsDecideButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.18);
+}
+
+.backButton:active,
+.letUsDecideButton:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+}
