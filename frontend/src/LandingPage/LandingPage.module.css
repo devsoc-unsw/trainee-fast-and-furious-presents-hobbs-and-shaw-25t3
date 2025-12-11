@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  background-color: #f9f6ef;
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  font-size: 100px;
+  font-family: "Jaro";
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #3d405b;
+}
+.emoji {
+  font-size: 50px;
+}
+
+.image {
+  width: 25rem;
+  height: 25rem;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+.set1 {
+  position: absolute;
+  width: 40vw;
+  display: flex;
+  justify-content: space-between;
+}
+.set2 {
+  position: absolute;
+  width: 40vw;
+  display: flex;
+  justify-content: space-between;
+}
+.button {
+  font-size: 20px;
+  background-color: #f2cc8f;
+}
