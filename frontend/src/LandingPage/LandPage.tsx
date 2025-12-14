@@ -1,4 +1,4 @@
-import food from "./assets/food.jpg"; // Relative path to the image file
+import food from "./assets/food2.png"; // Relative path to the image file
 import styles from "./LandingPage.module.css";
 
 const LandingPage = () => {
@@ -7,20 +7,23 @@ const LandingPage = () => {
       <img src={food} className={styles.image} alt="food image " />
       <div className={styles.content}>
         <span className={styles.title}>Mood2Food!</span>
-        <p>
+        <span className={styles.paragraph}>
           Discover the best restaurants, according to mood, location, price and
           more!
-        </p>
+        </span>
         <button className={styles.button}>Get Started</button>
       </div>
-      <div className={styles.set1}>
-        <span className={styles.emoji}>🥰</span>
-        <span className={styles.emoji}>😭</span>
+      <div className={styles.emojiContainer}>
+        <span className={styles.set1}>
+          <span className={`${styles.emoji} ${styles.e1} `}>🥰</span>
+          <span className={styles.emoji}>😭</span>
+        </span>
+        <span className={styles.set2}>
+          <span className={`${styles.emoji} ${styles.e2}`}>🙂</span>
+          <span className={styles.emoji}>🤬</span>
+        </span>
       </div>
-      <div className={styles.set2}>
-        <span className={styles.emoji}>🤬</span>
-        <span className={styles.emoji}>🙂</span>
-      </div>
+      <div className={styles.colourColumn}></div>
     </div>
   );
 };
