@@ -1,5 +1,6 @@
 export interface SelectorPageProps {
     question: string;
-    emojis: Map<string, () => void>;
-    prevPage: string;
+    field: string;
+    emojis: Map<string, string>;
+    to: string;
 }
