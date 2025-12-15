@@ -1,4 +1,23 @@
 .button {
-  width: fit-content;
-  height: fit-content;
+  min-width: 180px;
+  padding: 14px 32px;
+  border-radius: 999px;
+  border: none;
+  background-color: #f0c46a;
+  color: #2e3155;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.18);
+}
+
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
 }
