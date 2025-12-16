@@ -1,0 +1,27 @@
+.page {
+  width: 100%;          
+  min-height: 100vh;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff7ea; /* soft cream */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #2e3155; /* dark navy */
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0px auto;
+}
+
+.navButtons {
+  display: flex;
+  gap: 5rem;
+}
