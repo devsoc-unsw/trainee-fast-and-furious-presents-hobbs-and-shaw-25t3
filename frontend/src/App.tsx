@@ -2,7 +2,7 @@ import { SelectorPage } from './pages/SelectorPage/SelectorPage'
 import type { ResultsCardProps, SelectorPageProps } from './utils/types'
 import './App.css'
 import { Routes, Route } from "react-router-dom";
-import ResultsCard from './components/ResultsCard/ResultsCard';
+import ResultsPage from './pages/ResultsPage/ResultsPage';
 
 const dummyData: SelectorPageProps = {
   question: "My Question",
@@ -32,7 +32,7 @@ function App() {
       <Routes>
         <Route path='/' element={<SelectorPage question={dummyData.question} field={dummyData.field} emojis={dummyData.emojis} to={dummyData.to} />} />
         <Route path='/results' element={
-          <ResultsCard
+          <ResultsPage
             restaurantName={dummyResults.restaurantName}
             address={dummyResults.address}
             priceRange={dummyResults.priceRange}
