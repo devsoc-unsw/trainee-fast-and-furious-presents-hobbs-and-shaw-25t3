@@ -1,6 +1,6 @@
 import { Redis } from "@upstash/redis";
 
-const HISTORY_LIMIT = 5;
+const HISTORY_LIMIT = 6;
 
 export async function addRestaurantToHistory(redis: Redis, userId: string, restaurantId: number) {
   await redis.lpush(userId, restaurantId);
