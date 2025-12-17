@@ -1,0 +1,49 @@
+.cardWrapper {
+  width: 75vw;
+  height: 75vh;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+
+  border-radius: 45px;
+
+  background-color: red;
+}
+
+.infoBlockWrapper {
+  width: 50%;
+  height: 100%;
+
+  border-top-left-radius: 45px;
+  border-bottom-left-radius: 45px;
+
+  background-color: #E07A5F;
+
+}
+
+.header {
+  border-top-left-radius: 45px;
+  height: 20%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #FFFFFF;
+  font-size: 50pt;
+}
+
+.address {
+  height: 12.5%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #FFFFFF;
+  font-size: 30pt;
+}
