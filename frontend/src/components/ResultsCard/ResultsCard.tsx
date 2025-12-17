@@ -44,7 +44,7 @@ export default function ResultsCard(props: ResultsCardProps) {
             </div>
           </div>
           <div className={classes.buttonSection}>
-            <button>
+            <button onClick={props.onNext}>
               <p>
                 No... show me more!
               </p>

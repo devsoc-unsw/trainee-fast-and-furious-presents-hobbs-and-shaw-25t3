@@ -11,5 +11,10 @@ export interface ResultsCardProps {
   priceRange: string;
   website: string; // URL
   starRating: number;
+  onNext?: () => void;
 }
 
+
+export interface ResultsPageProps {
+  restaurants: ResultsCardProps[];
+}

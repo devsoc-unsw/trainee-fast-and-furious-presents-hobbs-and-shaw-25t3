@@ -1,5 +1,5 @@
 import { SelectorPage } from './pages/SelectorPage/SelectorPage'
-import type { ResultsCardProps, SelectorPageProps } from './utils/types'
+import type { ResultsPageProps, SelectorPageProps } from './utils/types'
 import './App.css'
 import { Routes, Route } from "react-router-dom";
 import ResultsPage from './pages/ResultsPage/ResultsPage';
@@ -18,12 +18,30 @@ const dummyData: SelectorPageProps = {
   to: '/next'
 }
 
-const dummyResults: ResultsCardProps = {
-  restaurantName: 'Gelatissimo',
-  address: '33 Martin Rd, Darling Square',
-  priceRange: '$-$$',
-  website: 'https://www.gelatissimo.com.au/',
-  starRating: 5
+const dummyResults: ResultsPageProps = {
+  restaurants: [
+    {
+      restaurantName: 'Gelatissimo',
+      address: '33 Martin Rd, Darling Square',
+      priceRange: '$-$$',
+      website: 'https://www.gelatissimo.com.au/',
+      starRating: 5,
+    },
+    {
+      restaurantName: 'Restaurant 2',
+      address: 'Address 2',
+      priceRange: '$-$$',
+      website: 'https://www.github.com',
+      starRating: 4,
+    },
+    {
+      restaurantName: 'Resto 3',
+      address: 'Address 3',
+      priceRange: '$$-$$$',
+      website: 'https://www.youtube.com',
+      starRating: 3,
+    }
+  ]
 }
 
 function App() {
@@ -33,11 +51,7 @@ function App() {
         <Route path='/' element={<SelectorPage question={dummyData.question} field={dummyData.field} emojis={dummyData.emojis} to={dummyData.to} />} />
         <Route path='/results' element={
           <ResultsPage
-            restaurantName={dummyResults.restaurantName}
-            address={dummyResults.address}
-            priceRange={dummyResults.priceRange}
-            website={dummyResults.website}
-            starRating={dummyResults.starRating}
+            restaurants={dummyResults.restaurants}
           />}
         />
       </Routes>
