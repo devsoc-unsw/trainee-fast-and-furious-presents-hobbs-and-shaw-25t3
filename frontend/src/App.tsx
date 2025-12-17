@@ -1,5 +1,5 @@
 import { SelectorPage } from './pages/SelectorPage/SelectorPage'
-import type { SelectorPageProps } from './utils/types'
+import type { ResultsCardProps, SelectorPageProps } from './utils/types'
 import './App.css'
 import { Routes, Route } from "react-router-dom";
 import ResultsCard from './components/ResultsCard/ResultsCard';
@@ -18,12 +18,28 @@ const dummyData: SelectorPageProps = {
   to: '/next'
 }
 
+const dummyResults: ResultsCardProps = {
+  restaurantName: 'Gelatissimo',
+  address: '33 Martin Rd, Darling Square',
+  priceRange: '$-$$',
+  website: 'https://www.gelatissimo.com.au/',
+  starRating: 5
+}
+
 function App() {
   return (
     <>
       <Routes>
         <Route path='/' element={<SelectorPage question={dummyData.question} field={dummyData.field} emojis={dummyData.emojis} to={dummyData.to} />} />
-        <Route path='/results' element={<ResultsCard />} />
+        <Route path='/results' element={
+          <ResultsCard
+            restaurantName={dummyResults.restaurantName}
+            address={dummyResults.address}
+            priceRange={dummyResults.priceRange}
+            website={dummyResults.website}
+            starRating={dummyResults.starRating}
+          />}
+        />
       </Routes>
     </>
   )

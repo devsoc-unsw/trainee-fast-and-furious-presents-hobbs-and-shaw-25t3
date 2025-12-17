@@ -9,5 +9,7 @@ export interface ResultsCardProps {
   restaurantName: string;
   address: string;
   priceRange: string;
+  website: string; // URL
+  starRating: number;
 }
 
