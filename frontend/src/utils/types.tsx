@@ -1,6 +1,13 @@
 export interface SelectorPageProps {
-    question: string;
-    field: string;
-    emojis: Map<string, string>;
-    to: string;
+  question: string;
+  field: string;
+  emojis: Map<string, string>;
+  to: string;
 }
+
+export interface ResultsCardProps {
+  restaurantName: string;
+  address: string;
+  priceRange: string;
+}
+
