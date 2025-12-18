@@ -10,8 +10,9 @@ const SelectorPage = (props: SelectorPageProps) => {
 
   const handleEmojiSelected = async (value: string) => {
     try {
-      await updateField(props.field, value);
-      navigate(props.to);
+      //await updateField(props.stage.field, value);
+      props.handleStageChange(props.stage.to);
+      // navigate(props.stage.to);
     } catch (err) {
       console.error("Failed to update field", err);
     }
@@ -19,13 +20,16 @@ const SelectorPage = (props: SelectorPageProps) => {
 
   return (
     <div className={styles.page}>
-      <h1 className={styles.heading}>{props.question}</h1>
+      <h1 className={styles.heading}>{props.stage.question}</h1>
 
-      <Selector emojis={props.emojis} onSelect={handleEmojiSelected} />
+      <Selector emojis={props.stage.emojis} onSelect={handleEmojiSelected} />
 
       <div className={styles.navButtons}>
         <Button text="Back" onClick={() => navigate(-1)} />
-        <Button text="Let Us Decide!" onClick={() => navigate(props.to)} />
+        <Button
+          text="Let Us Decide!"
+          onClick={() => navigate(props.stage.to)}
+        />
       </div>
     </div>
   );

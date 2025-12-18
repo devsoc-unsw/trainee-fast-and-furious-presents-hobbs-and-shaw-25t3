@@ -1,6 +1,11 @@
+export interface StageProps {
+  question: string;
+  field: string;
+  emojis: Map<string, string>;
+  to: string;
+}
+
 export interface SelectorPageProps {
-    question: string;
-    field: string;
-    emojis: Map<string, string>;
-    to: string;
+  stage: StageProps;
+  handleStageChange: (arg0: string) => void;
 }
