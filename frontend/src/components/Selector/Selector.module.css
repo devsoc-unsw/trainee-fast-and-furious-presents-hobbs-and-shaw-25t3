@@ -1,0 +1,35 @@
+.selector {
+  display: flex;
+  width: min(960px, 92vw);
+  height: 110px;
+  background-color: hsl(13, 68%, 63%);
+  border-radius: 20px;
+  margin: 3rem auto;
+  overflow: visible;
+  gap: 0px;
+}
+
+.emojiButton {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(44px, 6vw, 72px);
+  line-height: 1;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, z-index 0.2s ease;
+  z-index: 1;
+}
+
+.emojiButton:hover {
+  transform: scale(1.5);
+  z-index: 10;
+}
+
+.selected {
+  transform: scale(1.6);
+  z-index: 20;
+}
