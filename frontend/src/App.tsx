@@ -1,6 +1,8 @@
+
 import { SelectorPage } from './pages/SelectorPage/SelectorPage'
 import type { ResultsPageProps, SelectorPageProps } from './utils/types'
 import './App.css'
+import { SliderDemo } from "./components/SliderDemo";
 import { Routes, Route } from "react-router-dom";
 import ResultsPage from './pages/ResultsPage/ResultsPage';
 import { LandingPage } from './pages/LandingPage/LandPage';
