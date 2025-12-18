@@ -1,6 +1,7 @@
 import classes from './ResultsCard.module.css';
 import type { ResultsCardProps } from '../../utils/types';
 import star from '../../assets/star.png'
+import { saveRestaurant } from '../../api/saveRestaurant';
 
 // TODO: we'll make a function that converts the pricing from maps API to $-$$ type beat
 
@@ -49,7 +50,7 @@ export default function ResultsCard(props: ResultsCardProps) {
                 No... show me more!
               </p>
             </button>
-            <button>
+            <button onClick={() => saveRestaurant(props.restaurantName)}> {/* TODO: also include restaurantId. Should also go to accept page*/}
               <p>
                 Yes, I wanna go here!
               </p>

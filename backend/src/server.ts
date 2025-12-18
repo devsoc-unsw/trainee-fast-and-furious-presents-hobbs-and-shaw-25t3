@@ -53,14 +53,14 @@ app.use(async (req: Request, res: Response, next: NextFunction) => {
 // Save restaurant for a user
 app.post('/api/visited', async (req: Request, res: Response) => {
   const userId = req.userId as string;
-  const { restaurantId } = req.body;
+  const { restaurantName } = req.body;
 
-  if (!restaurantId) {
-    return res.status(400).json({ message: 'Missing restaurantId.' });
+  if (!restaurantName) {
+    return res.status(400).json({ message: 'Missing restaurantName.' });
   }
 
   try {
-    await addRestaurantToHistory(redis, userId, restaurantId);
+    await addRestaurantToHistory(redis, userId, restaurantName);
     return res.status(200).json({ message: 'History update successful.' });
   } catch (e) {
     console.log('Error adding restaurant: ', e);
