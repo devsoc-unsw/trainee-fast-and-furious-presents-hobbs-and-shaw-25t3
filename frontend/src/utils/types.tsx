@@ -18,3 +18,7 @@ export interface ResultsCardProps {
 export interface ResultsPageProps {
   restaurants: ResultsCardProps[];
 }
+
+export interface ConfirmationPageProps {
+  restaurantChoice: string;
+}
