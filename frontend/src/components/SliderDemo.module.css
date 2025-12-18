@@ -134,3 +134,43 @@
   transform: translateY(0);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
 }
+
+.buttonsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px; /* space between rows */
+}
+
+.buttonsRow {
+  display: flex;
+  gap: 40px;
+}
+
+.continueButton {
+  min-width: 220px;
+  padding: 14px 32px;
+  border-radius: 999px;
+  border: none;
+
+  background-color: #e6b3a2;
+
+  color: #2e3155;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  margin-top: 20px;
+}
+
+.continueButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.continueButton:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}

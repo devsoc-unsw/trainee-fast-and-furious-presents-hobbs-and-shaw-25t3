@@ -69,6 +69,15 @@ export function SliderDemo({ onSelectDistance }: SliderDemoProps) {
                 </button>
             </div>
 
+            <button
+                className={styles.continueButton}
+                onClick={() => {
+                if (onSelectDistance) onSelectDistance(distance);
+                }}
+            >
+                Continue...
+            </button>
+
         </div>
     );
     }
