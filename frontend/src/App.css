@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Jaro";
+  src: url("./pages/LandingPage/assets/Jaro/Jaro-Regular-VariableFont_opsz.ttf")
+    format("truetype");
+  font-weight: 200; /*cant edit font-weight, only 400*/
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NanumGothic";
+  src: url("./pages/LandingPage/assets/Nanum_Gothic/NanumGothic-Regular.ttf")
+    format("truetype");
+  font-style: normal;
+}
+

@@ -3,6 +3,7 @@ import type { ResultsPageProps, SelectorPageProps } from './utils/types'
 import './App.css'
 import { Routes, Route } from "react-router-dom";
 import ResultsPage from './pages/ResultsPage/ResultsPage';
+import { LandingPage } from './pages/LandingPage/LandPage';
 
 const dummyData: SelectorPageProps = {
   question: "My Question",
@@ -48,15 +49,16 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<SelectorPage question={dummyData.question} field={dummyData.field} emojis={dummyData.emojis} to={dummyData.to} />} />
+        <Route path='/' element={<LandingPage />} />
+        {/* <Route path='/' element={<SelectorPage question={dummyData.question} field={dummyData.field} emojis={dummyData.emojis} to={dummyData.to} />}/> */}
         <Route path='/results' element={
           <ResultsPage
             restaurants={dummyResults.restaurants}
           />}
         />
-      </Routes>
+      </Routes >
     </>
-  )
+  );
 }
 
 export default App;
