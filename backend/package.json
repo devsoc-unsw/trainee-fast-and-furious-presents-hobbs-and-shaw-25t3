@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "tsx src/server.ts"
+    "start": "tsx src/server.ts",
+    "dev": "tsx watch --clear-screen=false src/server.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
