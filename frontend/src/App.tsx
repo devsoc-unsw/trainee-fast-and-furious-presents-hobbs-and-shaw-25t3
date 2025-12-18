@@ -24,7 +24,7 @@ function App() {
         <Route path='/' element={<SelectorPage question={dummyData.question} field={dummyData.field} emojis={dummyData.emojis} to={dummyData.to} />}/>
       </Routes>
     </>
-  )
+  );
 }
 
 export default App;
