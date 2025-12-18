@@ -2,10 +2,20 @@ import classes from './ResultsCard.module.css';
 import type { ResultsCardProps } from '../../utils/types';
 import star from '../../assets/star.png'
 import { saveRestaurant } from '../../api/saveRestaurant';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // TODO: we'll make a function that converts the pricing from maps API to $-$$ type beat
 
+function confirmResto(restaurantName: string, setConfirmed: (confirmed: boolean) => void) {
+  saveRestaurant(restaurantName);
+  setConfirmed(true);
+}
+
 export default function ResultsCard(props: ResultsCardProps) {
+  const [confirmed, setConfirmed] = useState(props.confirmed);
+  const navigate = useNavigate();
+
   return (
     <>
       <div className={classes.cardWrapper}>
@@ -44,18 +54,32 @@ export default function ResultsCard(props: ResultsCardProps) {
               </p>
             </div>
           </div>
-          <div className={classes.buttonSection}>
-            <button onClick={props.onNext}>
-              <p>
-                No... show me more!
-              </p>
-            </button>
-            <button onClick={() => saveRestaurant(props.restaurantName)}> {/* TODO: also include restaurantId. Should also go to accept page*/}
-              <p>
-                Yes, I wanna go here!
-              </p>
-            </button>
-          </div>
+          {!confirmed &&
+            <div className={classes.buttonSection}>
+              <button onClick={props.onNext}>
+                <p>
+                  No... show me more!
+                </p>
+              </button>
+              <button onClick={() => confirmResto(props.restaurantName, setConfirmed)}> {/* TODO: also include restaurantId. */}
+                <p>
+                  Yes, I wanna go here!
+                </p>
+              </button>
+            </div>
+          }
+          {confirmed &&
+            <div className={classes.confirmedSection}>
+              <div>
+                Yay! Enjoy your food!!
+              </div>
+              <button onClick={() => navigate('/')}>
+                <p>
+                  Back to home
+                </p>
+              </button>
+            </div>
+          }
         </div>
         <div>
           Map

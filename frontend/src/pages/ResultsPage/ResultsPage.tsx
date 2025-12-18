@@ -1,9 +1,11 @@
 import { useState } from "react";
 import ResultsCard from "../../components/ResultsCard/ResultsCard";
 import type { ResultsPageProps } from "../../utils/types";
+import styles from './ResultsPage.module.css'
 
 export default function ResultsPage(props: ResultsPageProps) {
   const [currentIdx, setCurrentIdx] = useState(0);
+  const [confirmed, setConfirmed] = useState(false);
 
   const handleShowNext = () => {
     if (currentIdx < props.restaurants.length - 1) {
@@ -17,13 +19,18 @@ export default function ResultsPage(props: ResultsPageProps) {
   const current = props.restaurants[currentIdx];
 
   return (
-    <ResultsCard
-      restaurantName={current.restaurantName}
-      address={current.address}
-      priceRange={current.priceRange}
-      website={current.website}
-      starRating={current.starRating}
-      onNext={handleShowNext}
-    />
+    <>
+      <div className={styles.page}>
+        <ResultsCard
+          restaurantName={current.restaurantName}
+          address={current.address}
+          priceRange={current.priceRange}
+          website={current.website}
+          starRating={current.starRating}
+          onNext={handleShowNext}
+          confirmed={confirmed}
+        />
+      </div >
+    </>
   );
 }

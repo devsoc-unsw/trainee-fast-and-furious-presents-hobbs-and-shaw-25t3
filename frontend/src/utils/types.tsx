@@ -12,13 +12,10 @@ export interface ResultsCardProps {
   website: string; // URL
   starRating: number;
   onNext?: () => void;
+  confirmed?: boolean;
 }
 
 
 export interface ResultsPageProps {
   restaurants: ResultsCardProps[];
-}
-
-export interface ConfirmationPageProps {
-  restaurantChoice: string;
 }

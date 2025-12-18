@@ -1,4 +1,3 @@
-
 import { SelectorPage } from './pages/SelectorPage/SelectorPage'
 import type { ResultsPageProps, SelectorPageProps } from './utils/types'
 import './App.css'
@@ -6,7 +5,6 @@ import { SliderDemo } from "./components/SliderDemo";
 import { Routes, Route } from "react-router-dom";
 import ResultsPage from './pages/ResultsPage/ResultsPage';
 import { LandingPage } from './pages/LandingPage/LandPage';
-import ConfirmationPage from './pages/ConfirmationPage/ConfirmationPage';
 
 const dummyData: SelectorPageProps = {
   question: "My Question",
@@ -59,9 +57,6 @@ function App() {
             restaurants={dummyResults.restaurants}
           />}
         />
-        <Route path='/confirmation' element={
-          <ConfirmationPage />
-        } />
       </Routes >
     </>
   );
