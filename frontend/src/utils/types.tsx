@@ -12,6 +12,7 @@ export interface ResultsCardProps {
   website: string; // URL
   starRating: number;
   onNext?: () => void;
+  confirmed?: boolean;
 }
 
 
