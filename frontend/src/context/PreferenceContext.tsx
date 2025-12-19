@@ -37,3 +37,8 @@ export const PreferenceProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
+export const usePreferences = () => {
+  const context = useContext(PreferenceContext);
+  return context;
+}
