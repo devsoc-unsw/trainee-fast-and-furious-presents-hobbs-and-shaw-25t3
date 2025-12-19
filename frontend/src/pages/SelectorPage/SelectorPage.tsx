@@ -3,18 +3,14 @@ import { Button } from "../../components/Button/Button";
 import type { SelectorPageProps } from "../../utils/types";
 import styles from "./SelectorPage.module.css";
 import { useNavigate } from "react-router-dom";
-import { updateField } from "../../api/updateField";
+import { usePreferences } from "../../context/PreferenceContext";
 
 const SelectorPage = (props: SelectorPageProps) => {
   const navigate = useNavigate();
-
-  const handleEmojiSelected = async (value: string) => {
-    try {
-      await updateField(props.field, value);
+  const { updatePreferences } = usePreferences();
+  const handleEmojiSelected = (value: string) => {
+      updatePreferences(props.field, value);
       navigate(props.to);
-    } catch (err) {
-      console.error("Failed to update field", err);
-    }
   };
 
   return (
