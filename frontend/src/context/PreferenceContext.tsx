@@ -8,16 +8,20 @@ const defaultPreferences: Preferences = {
   distance: 5000
 };
 
-const PreferenceContext = createContext({
+type PreferenceContextType = {
+  preferences: Preferences;
+  updatePreferences: (field: string, value: string) => void;
+};
+
+const PreferenceContext = createContext<PreferenceContextType>({
   preferences: defaultPreferences,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  updatePreferences: (_field: string, _value: string) => {},
+  updatePreferences: () => {},
 });
 
 export const PreferenceProvider = ({ children }: { children: ReactNode }) => {
   const [ preferences, setPreferences ] = useState(defaultPreferences);
 
-  const updatePreferences = (field: string, value: string | number) => {
+  const updatePreferences = (field: string, value: string) => {
     setPreferences(preferences => {
       return {
         ...preferences,
