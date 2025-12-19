@@ -1,4 +1,4 @@
-import { createContext, useState, type ReactNode } from "react";
+import { createContext, useContext, useState, type ReactNode } from "react";
 import type { Preferences } from "../utils/types";
 
 const defaultPreferences: Preferences = {
