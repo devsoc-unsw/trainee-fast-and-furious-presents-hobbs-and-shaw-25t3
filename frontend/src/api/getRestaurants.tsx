@@ -41,7 +41,7 @@ export async function getRestaurants({
         node
         ["amenity"~"${type}"]
         ["name"]
-        ["cuisine"~${cuisines},i]
+        ["cuisine"~"${cuisines}",i]
         (around:${radiusMeters},-33.8688,151.2093);
         out tags center 30;
     `;

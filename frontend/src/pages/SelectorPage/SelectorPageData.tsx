@@ -3,12 +3,12 @@ export const SelectorPageData = [
     question: 'What are you feeling?',
     field: 'mood',
     emojis: new Map([
-      ['🥳', 'excited'],
-      ['🥰', 'loved'],
-      ['😭', 'sad'],
-      ['😎', 'chill'],
-      ['😴', 'tired'],
-      ['😡', 'angry'],
+      ['🥳', 'thai|chinese|burger'],
+      ['🥰', 'french|italian|dessert|bakery|steak_house'],
+      ['😭', 'japanese|korean|thai|fast_food|american|hot_pot|ramen'],
+      ['😎', 'italian|american|greek|spanish|seafood'],
+      ['😴', 'burger|pizza'],
+      ['😡', 'mexican|indian|korean|jamaican|tex-mex'],
     ]),
   },
   {

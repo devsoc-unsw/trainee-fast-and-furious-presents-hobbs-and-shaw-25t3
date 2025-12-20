@@ -28,13 +28,16 @@ export interface Location {
 }
 
 export interface ResultsCardProps {
-  restaurantName: string;
-  address: string;
-  priceRange: string;
-  website: string; // URL
-  starRating: number;
+  restaurantName?: string;
+  address?: string;
+  priceRange?: string;
+  website?: string; // URL
+  starRating?: number;
   onNext?: () => void;
   confirmed?: boolean;
+  lat: number;
+  lng: number;
+  cuisine?: string;
 }
 
 
