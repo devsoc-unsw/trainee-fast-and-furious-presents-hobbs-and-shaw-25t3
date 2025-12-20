@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import ResultsCard from "../../components/ResultsCard/ResultsCard";
-import type { ResultsPageProps } from "../../utils/types";
 import styles from './ResultsPage.module.css'
 import { getRestaurants } from "../../api/getRestaurants";
 import { usePreferences } from "../../context/PreferenceContext";
@@ -13,7 +12,7 @@ type Restaurant = {
   tags?: Record<string, string>;
 };
 
-export default function ResultsPage(props: ResultsPageProps) {
+export default function ResultsPage() {
   const { preferences } = usePreferences();
   const [currentIdx, setCurrentIdx] = useState(0);
   const [confirmed, setConfirmed] = useState(false);
@@ -94,6 +93,9 @@ export default function ResultsPage(props: ResultsPageProps) {
           starRating={5}
           onNext={handleShowNext}
           confirmed={confirmed}
+          lat={current.lat}
+          lng={current.lng}
+          cuisine={current.tags?.cuisine}
         />
       </div >
     </>

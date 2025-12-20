@@ -35,6 +35,9 @@ export interface ResultsCardProps {
   starRating?: number;
   onNext?: () => void;
   confirmed?: boolean;
+  lat: number;
+  lng: number;
+  cuisine?: string;
 }
 
 

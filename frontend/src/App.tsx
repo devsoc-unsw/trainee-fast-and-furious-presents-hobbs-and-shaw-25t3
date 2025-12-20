@@ -1,5 +1,4 @@
 import { SelectorPage } from './pages/SelectorPage/SelectorPage'
-import type { ResultsPageProps } from './utils/types'
 import './App.css'
 // import { SliderDemo } from "./components/SliderDemo";
 import { Routes, Route } from "react-router-dom";
@@ -7,32 +6,7 @@ import ResultsPage from './pages/ResultsPage/ResultsPage';
 import { LandingPage } from './pages/LandingPage/LandPage';
 import { PreferenceProvider } from "./context/PreferenceContext";
 import { SelectorPageData } from './pages/SelectorPage/SelectorPageData';
-
-const dummyResults: ResultsPageProps = {
-  restaurants: [
-    {
-      restaurantName: 'Gelatissimo',
-      address: '33 Martin Rd, Darling Square',
-      priceRange: '$-$$',
-      website: 'https://www.gelatissimo.com.au/',
-      starRating: 5,
-    },
-    {
-      restaurantName: 'Restaurant 2',
-      address: 'Address 2',
-      priceRange: '$-$$',
-      website: 'https://www.github.com',
-      starRating: 4,
-    },
-    {
-      restaurantName: 'Resto 3',
-      address: 'Address 3',
-      priceRange: '$$-$$$',
-      website: 'https://www.youtube.com',
-      starRating: 3,
-    }
-  ]
-}
+import "maplibre-gl/dist/maplibre-gl.css";
 
 function App() {
   return (
@@ -60,9 +34,7 @@ function App() {
             );
           })}
           <Route path='/results' element={
-            <ResultsPage
-              restaurants={dummyResults.restaurants}
-            />}
+            <ResultsPage/>}
           />
         </Routes >
       </PreferenceProvider>

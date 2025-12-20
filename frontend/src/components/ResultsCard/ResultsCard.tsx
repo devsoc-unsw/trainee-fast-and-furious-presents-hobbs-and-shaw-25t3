@@ -4,7 +4,7 @@ import star from '../../assets/star.png'
 import { saveRestaurant } from '../../api/saveRestaurant';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { getCuisineImage } from '../../utils/images';
 // TODO: we'll make a function that converts the pricing from maps API to $-$$ type beat
 
 function confirmResto(restaurantName: string | undefined, setConfirmed: (confirmed: boolean) => void) {
@@ -84,7 +84,10 @@ export default function ResultsCard(props: ResultsCardProps) {
           }
         </div>
         <div>
-          Map
+          <img
+            src={getCuisineImage(props.cuisine)}
+            className={classes.restaurantImg}
+          />
         </div>
       </div>
     </>
