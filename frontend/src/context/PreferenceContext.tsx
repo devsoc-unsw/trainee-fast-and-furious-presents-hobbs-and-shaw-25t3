@@ -5,7 +5,7 @@ const defaultPreferences: Preferences = {
   mood: '',
   group: '',
   price: 0,
-  distance: 5000
+  distance: 5
 };
 
 type PreferenceContextType = {
