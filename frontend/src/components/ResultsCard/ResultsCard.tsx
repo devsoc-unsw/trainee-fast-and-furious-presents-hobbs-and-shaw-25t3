@@ -83,10 +83,11 @@ export default function ResultsCard(props: ResultsCardProps) {
             </div>
           }
         </div>
-        <div>
+        <div className={classes.imageContainer}>
           <img
             src={getCuisineImage(props.cuisine)}
             className={classes.restaurantImg}
+            alt={props.restaurantName}
           />
         </div>
       </div>
