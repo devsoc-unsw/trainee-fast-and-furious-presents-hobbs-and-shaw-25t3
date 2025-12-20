@@ -29,4 +29,9 @@ export const SelectorPageData = [
       ['💵💵💵', '3'],
     ]),
   },
+  {
+    question: 'How far can you go?',
+    field: 'distance',
+    emojis: new Map(),
+  }
 ];
