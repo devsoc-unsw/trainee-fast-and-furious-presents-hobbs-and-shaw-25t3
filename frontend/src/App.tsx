@@ -42,7 +42,7 @@ function App() {
           <Route path='/' element={<LandingPage />} />
           {SelectorPageData.map((page, index) => {
             const isLast = index === SelectorPageData.length - 1;
-            const nextPath = isLast ? "/distance" : `/${SelectorPageData[index + 1].field}`;
+            const nextPath = isLast ? "/results" : `/${SelectorPageData[index + 1].field}`;
 
             return (
               <Route
