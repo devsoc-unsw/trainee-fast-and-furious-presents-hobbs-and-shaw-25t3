@@ -22,6 +22,11 @@ export interface Preferences {
   distance: number;
 }
 
+export interface Location {
+  lat: number;
+  lng: number;
+}
+
 export interface ResultsCardProps {
   restaurantName: string;
   address: string;

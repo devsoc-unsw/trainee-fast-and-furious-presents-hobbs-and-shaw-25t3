@@ -1,0 +1,65 @@
+.sliderRow {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1rem;
+  margin: 3rem 0;
+}
+
+/* Radix Root */
+.root {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 48px;
+}
+
+/* Orange bar */
+.track {
+    width: 100%;
+  position: relative;
+  flex-grow: 1;
+  height: 14px;
+  border-radius: 999px;
+  background-color: #d97a61;
+  overflow: hidden;
+}
+
+/* Filled part */
+.range {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #d97a61;
+}
+
+/* Thumb: BIG circle + grow on drag */
+.thumb {
+  width: 40px;
+  height: 40px;
+  display: block; 
+  border-radius: 50%;
+  background-color: #2e3155;
+  box-sizing: border-box;
+  cursor: grab;
+  transition: transform 0.08s ease-out;
+  transition: transform 0.05s ease;
+  /* transition: transform 0.15s ease; */
+  outline: none
+}
+
+.thumb:active,
+.thumb[data-state="active"] {
+  transform: scale(1.15);
+  cursor: grabbing;
+}
+
+.valueText {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
