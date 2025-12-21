@@ -25,6 +25,9 @@
 
   background-color: #E07A5F;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .header {
@@ -55,15 +58,20 @@
 
   display: flex;
   flex-direction: column;
+  flex: 1;
+  min-height: 0;
 }
 
 .infoBlockEntry {
   width: 100%;
   color: #FFFFFF;
-
+  align-items: center;
   display: flex;
 }
 
+.infoBlockEntryValue {
+  color: whitesmoke;
+}
 .infoBlockEntry p {
   color: #FFFFFF;
   font-size: 20pt;
@@ -72,7 +80,6 @@
   display: block;
   text-align: center;
 }
-
 .infoBlockEntry a {
   color: #FFFFFF;
   font-size: 20pt;
@@ -81,7 +88,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: underline;
+  text-decoration: none;
 
   min-width: 0;
 }
@@ -103,7 +110,8 @@
 }
 
 .buttonSection {
-  margin-top: 2%;
+  margin-top: auto;
+  padding-bottom: 2%;
   display: flex;
   justify-content: space-around;
 }
@@ -128,6 +136,8 @@ button:active {
 }
 
 .confirmedSection {
+  margin-top: auto;
+  padding-bottom: 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
