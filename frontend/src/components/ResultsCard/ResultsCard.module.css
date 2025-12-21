@@ -108,6 +108,7 @@
 
 .buttonSection {
   margin-top: auto;
+  margin-bottom: 5%;
   padding-bottom: 2%;
   display: flex;
   justify-content: space-around;
