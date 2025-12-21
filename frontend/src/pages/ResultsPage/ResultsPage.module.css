@@ -4,6 +4,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: #fff7ea;
+  padding-top: 2rem;
+  position: relative;
+}
+
+.loading {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff7ea;
+  padding-top: 2rem;
+  position: relative;
+  justify-content: center;
+}
+
+.header {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  color: #3d405b;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+  font-family: "Jaro", sans-serif;
 }

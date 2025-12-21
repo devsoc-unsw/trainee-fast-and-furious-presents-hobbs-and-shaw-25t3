@@ -73,13 +73,13 @@ export default function ResultsCard(props: ResultsCardProps) {
           </div>
           {!confirmed &&
             <div className={classes.buttonSection}>
-              <button onClick={props.onNext}>
-                <p>
+              <button onClick={props.onNext} className={classes.decisionButton}>
+                <p className={classes.buttonText}>
                   Choose another option
                 </p>
               </button>
-              <button onClick={() => confirmResto(props.restaurantName, setConfirmed)}> {/* TODO: also include restaurantId. */}
-                <p>
+              <button onClick={() => confirmResto(props.restaurantName, setConfirmed)} className={classes.decisionButton}>
+                <p className={classes.buttonText}>
                   Yes, I wanna go here!
                 </p>
               </button>
@@ -87,11 +87,11 @@ export default function ResultsCard(props: ResultsCardProps) {
           }
           {confirmed &&
             <div className={classes.confirmedSection}>
-              <div>
+              <div className={classes.buttonText}>
                 Yay! Enjoy your food!!
               </div>
-              <button onClick={() => navigate('/')}>
-                <p>
+              <button onClick={() => navigate('/')} className={classes.decisionButton}>
+                <p className={classes.buttonText}>
                   Back to home
                 </p>
               </button>

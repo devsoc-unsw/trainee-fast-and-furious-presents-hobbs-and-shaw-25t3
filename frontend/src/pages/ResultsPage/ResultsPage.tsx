@@ -38,9 +38,9 @@ export default function ResultsPage() {
 
   if (restaurants.length === 0) {
     return (
-      <div className={styles.page}>
+      <div className={`${styles.page} ${styles.loading}`}>
         <BeatLoader size={32}/>
-        <p>Fetching restaurants…</p>
+        <p className={styles.flavorText}>Fetching restaurants…</p>
       </div>
     );
   }
@@ -87,6 +87,7 @@ export default function ResultsPage() {
   return (
     <>
       <div className={styles.page}>
+        <h1 className={styles.header}>Our Picks</h1>
         <ResultsCard
           restaurantName={current.tags?.name}
           address={address}
