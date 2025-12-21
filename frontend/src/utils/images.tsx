@@ -21,6 +21,14 @@ export const cuisineImages: Record<string, string[]> = {
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVIO9za5O96iOl-nFzM9XwKvtG2zv102pkng&s",
     "https://images.themodernproper.com/production/posts/2022/EasyCurryRamen-_7.jpg?w=960&h=960&q=82&fm=jpg&fit=crop&dm=1747762318&s=49ae97198eec8aa953d13e0566310fc5",
   ],
+  chinese: [
+    "https://www.iroamly.com/images/sichuan-cuisine.webp",
+    "https://www.canberratimes.com.au/images/transform/v1/crop/frm/MUwv8t3Wj4u7LSUBpSbqhh/7a3c134f-02ed-4fd5-8d5c-c897a7a61650.jpg/r505_376_3528_2643_w4032_h3024_fmax.jpg",
+    "https://media.timeout.com/images/106046755/750/562/image.jpg",
+    "https://qul.imgix.net/d42bddd1-47b7-4118-b98e-eda98ec5d0bc/495488_sld.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuxB7Yz0BpRbqaNRcvBc0yeuyg1jS7tAkhaQ&s",
+    "https://www.china-admissions.com/wp-content/uploads/2020/02/Chinese-food-1200x675.jpg"
+  ],
   mexican: [
     "https://images.immediate.co.uk/production/volatile/sites/30/2022/10/Pork-carnitas-b94893e.jpg?resize=900%2C471",
     "https://static1.squarespace.com/static/5e484ab628c78d6f7e602d73/5e484d29dd42c458f31f0b22/5f553083d65fd4695b7ff4ea/1747343608174/traditional-mexican-foods-min.jpeg?format=1500w",
@@ -44,6 +52,17 @@ export const cuisineImages: Record<string, string[]> = {
     "https://images.squarespace-cdn.com/content/v1/673d27173c10273998ecd238/bf26acb5-b195-42ef-9ae6-c3f516417b94/20231011VogueCafeOct2417425xKeraWongPhotography-Edit.jpg",
     "https://qul.imgix.net/d50650bd-9260-417b-a2e0-16bd6e19e80c/745662_sld.jpg"
   ],
+  thai: [
+    "https://hot-thai-kitchen.com/wp-content/uploads/2021/10/Untitled-design-5.jpg",
+    "https://www.elmundoeats.com/wp-content/uploads/2024/06/FP-Authentic-pad-Thai-in-a-plate.jpg",
+    "https://asianinspirations.com.au/wp-content/uploads/2020/01/R02479_Crab_Omelette.jpg",
+    "https://hot-thai-kitchen.com/wp-content/uploads/2022/04/Green-curry-chicken-sq-2.jpg"
+  ],
+  vietnamese: [
+    "https://asianinspirations.com.au/wp-content/uploads/2021/11/9-Secret-Ingredients-to-Cook-Authentic-Vietnamese-Food_Feat.jpg",
+    "https://www.experiencetravelgroup.com/wp-content/uploads/2025/08/vietnam-pho.webp",
+    "https://serenitydentalclinic.com/wp-content/uploads/2023/06/5-Must-Try-Vietnamese-Dishes.jpg"
+  ],
   french: [
     "https://img.delicious.com.au/o2B7uFv7/del/2021/09/ricotta-and-rosemary-hotcakes-with-maple-peaches-and-seeds-158427-2.jpg",
     "https://www.arc.unsw.edu.au/generated/hero-large/nathan-dumlao-714163-unsplash-jpg.jpg?1553682175",
@@ -56,9 +75,11 @@ export const cuisineImages: Record<string, string[]> = {
     "https://www.tasteofhome.com/wp-content/uploads/2025/07/30-Summer-Desserts-That-Are-No-Bake-and-Oh-So-Easy_TOHcom23_27515_P2_MD_03_22_6b.jpg",
     "https://www.simplyrecipes.com/thmb/D29Lm122a5DwKlOQy4eQR2VOt6o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/simply-recipes-chocolate-delight-lead-4-0554cb752f6a4d20b8b1f4c85473a95f.jpg"
   ],
-  fast_food: [
+  burger: [
     "https://www.daysoftheyear.com/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=cover%2Ch=1335%2Cq=85%2Cw=2000/wp-content/uploads/national-fast-food-day.jpg",
     "https://img.delicious.com.au/cgr-M_RA/w759-h506-cfill/del/2023/08/wendys-australia-222884-2.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0cFleHkr83XTp-0AALLRqiAOs7nZxme-OVQ&s",
+    "https://news.flinders.edu.au/wp-content/uploads/2018/01/McDonalds-low.jpg"
   ],
 };
 const FALLBACK_IMAGE = "https://static.vecteezy.com/system/resources/previews/004/141/669/non_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg"

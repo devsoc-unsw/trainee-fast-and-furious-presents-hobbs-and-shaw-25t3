@@ -42,7 +42,12 @@ export async function getRestaurants({
         ["amenity"~"${type}"]
         ["name"]
         ["cuisine"~"${cuisines}",i]
-        (around:${radiusMeters},-33.8688,151.2093);
+        (if:
+            t["addr:street"] ||
+            t["addr:housenumber"] ||
+            t["addr:postcode"]
+        )
+        (around:${radiusMeters},-33.9173,151.2313);
         out tags center 30;
     `;
     const res = await fetch("https://overpass-api.de/api/interpreter", {

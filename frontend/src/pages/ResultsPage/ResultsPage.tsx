@@ -3,6 +3,7 @@ import ResultsCard from "../../components/ResultsCard/ResultsCard";
 import styles from './ResultsPage.module.css'
 import { getRestaurants } from "../../api/getRestaurants";
 import { usePreferences } from "../../context/PreferenceContext";
+import { BeatLoader } from "react-spinners";
 
 type Restaurant = {
   id: number;
@@ -37,8 +38,9 @@ export default function ResultsPage() {
 
   if (restaurants.length === 0) {
     return (
-      <div className={styles.page}>
-        <p>Loading…</p>
+      <div className={`${styles.page} ${styles.loading}`}>
+        <BeatLoader size={32}/>
+        <p className={styles.flavorText}>Fetching restaurants…</p>
       </div>
     );
   }
@@ -85,12 +87,13 @@ export default function ResultsPage() {
   return (
     <>
       <div className={styles.page}>
+        <h1 className={styles.header}>Our Picks</h1>
         <ResultsCard
           restaurantName={current.tags?.name}
           address={address}
           priceRange={current.tags?.priceRange}
           website={current.tags?.website}
-          starRating={5}
+          starRating={Math.random() < 0.5 ? 4 : 5}
           onNext={handleShowNext}
           confirmed={confirmed}
           lat={current.lat}

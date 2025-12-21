@@ -9,3 +9,12 @@ html, body, #root {
   max-width: none;
   padding: 0;       
 }
+
+:root {
+  --font-display: 'Jaro', sans-serif;
+  --font-body: 'Jaro', sans-serif;
+}
+
+html, body {
+  font-family: var(--font-display);
+}

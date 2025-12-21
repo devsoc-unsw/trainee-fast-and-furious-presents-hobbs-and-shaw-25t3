@@ -17,6 +17,14 @@ function confirmResto(restaurantName: string | undefined, setConfirmed: (confirm
 export default function ResultsCard(props: ResultsCardProps) {
   const [confirmed, setConfirmed] = useState(props.confirmed);
   const navigate = useNavigate();
+  const firstCuisine = props.cuisine
+    ? props.cuisine
+        .toLowerCase()
+        .split(/[;,]/)
+        .map(c => c.trim())[0]
+    : undefined;
+
+  const cuisine = firstCuisine ? firstCuisine.charAt(0).toUpperCase() + firstCuisine.slice(1) : undefined;
 
   return (
     <>
@@ -31,23 +39,30 @@ export default function ResultsCard(props: ResultsCardProps) {
           <div className={classes.infoBlockWrapper}>
             <div className={classes.infoBlockEntry}>
               <p>
-                Price Range
+                Cuisine:
               </p>
-              <p>
-                {props.priceRange}
+              <p className={classes.infoBlockEntryValue}>
+                {cuisine}
               </p>
             </div>
             <div className={classes.infoBlockEntry}>
               <p>
-                Website
+                Website:
               </p>
-              <a href={props.website} target="_blank">
-                <span>{props.website}</span>
-              </a>
+              {props.website ? (
+                <a href={props.website} target="_blank" className={classes.website}>
+                  <span className={classes.infoBlockEntryValue}>{props.website}</span>
+                </a>
+              ) : (
+                <a href="">
+                <span className={classes.infoBlockEntryValue}>N/A</span>
+                </a>
+              )
+            }
             </div>
             <div className={classes.infoBlockEntry}>
-              <p>
-                Rating
+              <p className={classes.infoBlockEntryValue}>
+                Rating:
               </p>
               <p>
                 {[...Array(props.starRating)].map(() => {
@@ -58,13 +73,13 @@ export default function ResultsCard(props: ResultsCardProps) {
           </div>
           {!confirmed &&
             <div className={classes.buttonSection}>
-              <button onClick={props.onNext}>
-                <p>
-                  No... show me more!
+              <button onClick={props.onNext} className={classes.decisionButton}>
+                <p className={classes.buttonText}>
+                  Choose another option
                 </p>
               </button>
-              <button onClick={() => confirmResto(props.restaurantName, setConfirmed)}> {/* TODO: also include restaurantId. */}
-                <p>
+              <button onClick={() => confirmResto(props.restaurantName, setConfirmed)} className={classes.decisionButton}>
+                <p className={classes.buttonText}>
                   Yes, I wanna go here!
                 </p>
               </button>
@@ -72,11 +87,11 @@ export default function ResultsCard(props: ResultsCardProps) {
           }
           {confirmed &&
             <div className={classes.confirmedSection}>
-              <div>
+              <div className={classes.buttonText}>
                 Yay! Enjoy your food!!
               </div>
-              <button onClick={() => navigate('/')}>
-                <p>
+              <button onClick={() => navigate('/')} className={classes.decisionButton}>
+                <p className={classes.buttonText}>
                   Back to home
                 </p>
               </button>
